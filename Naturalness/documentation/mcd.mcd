@@ -1,0 +1,9 @@
+APP_USER: username,  email, hashed password, status, created at, updated at
+is author, ON APP_USER, 11 RECIPE
+
+
+CATEGORY: name, text, created at, updated at
+belongs to, 0N CATEGORY, 11 RECIPE
+RECIPE : name, category_id, shelf_life, explanation,  created at, updated at
+has, 0N COMPONENT, 1N RECIPE
+COMPONENT : name, recipe_id, amount, dose, created at, updated at
