@@ -1,0 +1,152 @@
+/** ALL **/
+body{
+   padding:.5em;
+   margin:0 2em;
+}
+
+main{
+    padding-bottom:2em;
+}
+
+.navbar{
+    margin-bottom: 2em;
+}
+
+ul{
+    list-style:none;
+}
+
+/**MATERIAL **/
+.materialcard{
+    margin-bottom:2em;
+}
+
+/**HOME **/
+
+.home{
+    background-image: url(../images/home.jpg);
+    background-size: 250vh;
+    background-repeat: no-repeat;
+    margin-top:-2em;
+    color: rgb(9, 46, 11);
+    text-align:center;
+}
+
+.home h1{
+    font-weight:600;
+    color:rgb(7, 49, 11);
+}
+
+.border-primary{
+    max-width: 20rem;
+    margin-right:1em;
+}
+
+.jumbotron{
+    padding:0.5em;
+    margin-top:1.5em;
+    margin-bottom:1.5em;
+    background-color: transparent;
+}
+
+.card-header{
+   font-size: 1em;
+   font-weight:600;
+}
+
+.card-title{
+    font-size:.9em;
+}
+
+.card-text{
+    font-size:.9em;
+}
+
+.close {
+    position: absolute;
+    bottom: 0;
+
+}
+
+.intro{
+    list-style:none;
+}
+
+.presentation-list>ul{
+    margin:3em 8em 5em 8em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.presentation-list>ul>li{
+    width:30%;
+    margin-bottom:2em;
+}
+
+/** FOOTER **/
+
+footer{
+    padding :1em;
+}
+
+.inactive {
+    display: none;
+}
+
+/** RECIPE **/
+
+.images{
+    width: 30%;
+    margin-bottom:0.2em;
+}
+
+.recipes{
+    max-width: 20rem;
+}
+
+.recipe{
+    padding:2em;
+}
+
+.recipe-comment {
+    font-size:.9em;
+    margin-bottom:.5em;
+}
+
+.pdf-btn a{
+    color:white;
+}
+
+.pdf-btn {
+    margin-bottom:2em;
+}
+
+/** SEARCH**/
+
+.head-search{
+ margin-bottom:3em;
+}
+
+.body-search{
+    margin:5em;
+}
+/** SIGNUP SIGNIN ACCOUNT**/
+.sign{
+margin:5em 25em 25em 25em ;
+}
+
+/** ACCOUNT**/
+.account{
+    margin : 5em 0 10em 0;
+}
+
+/** ABOUT**/
+.about{
+    margin:5em;
+}
+
+.about>p{
+   font-size:1em;
+}

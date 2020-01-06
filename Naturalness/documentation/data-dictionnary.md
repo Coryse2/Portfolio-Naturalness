@@ -5,7 +5,7 @@
 |-|-|-|-|
 |id|INT|PRIMARY KEY, NOT NULL, UNSIGNED, AUTO_INCREMENT|id of this recipe|
 |name|VARCHAR(255)|NOT NULL|name of the recipe|
-|shelf_-_life|VARCHAR(64)|NOT NULL|shelf life of the recipe|
+|shelf_life|VARCHAR(64)|NOT NULL|shelf life of the recipe|
 |explanation|TEXT| NULL|explanation |
 |category_id|INT| NULL|name of category of the recipe|
 |created_at|TIMESTAMP|NOT NULL, DEFAULT CURRENT_TIMESTAMP|creation date of the recipe|
