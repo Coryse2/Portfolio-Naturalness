@@ -10,7 +10,7 @@ If you want to use this site offline install the repo :
 
 2 - run `composer install`
 
-3- Import the sql database
+3- Import the sql database (Naturalness/documentation/naturalnessDB)
 
 4- create a .env at the root of the project then configurate your database (cf .env.example))
 
