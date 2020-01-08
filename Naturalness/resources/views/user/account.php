@@ -1,6 +1,6 @@
 <?php require dirname(__DIR__) . '/layout/header.php'; ?>
 
-<div class="row justify-content-center account">
+<div class="user-form row justify-content-center account">
     <div class="card  col-md-4 ">
 
         <div class="card-header">

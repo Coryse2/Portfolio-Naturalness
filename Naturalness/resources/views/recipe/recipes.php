@@ -2,7 +2,7 @@
 
 <div class="presentation-list">
   <ul>
-    <!-- Liste des recettes -->
+    <!-- Recipes list -->
     <?php foreach ($recipes as $recipe) : ?>
       <div class="card border-primary mb-3">
         <div class="card-header"><a href="<?= route('recipe_showRecipe', ['id' => $recipe->id]); ?>"><?= $recipe->name; ?></a></div>
@@ -13,7 +13,7 @@
         </div>
       </div>
     <?php endforeach; ?>
-    <!-- End Liste des recettes -->
+    <!-- End recipes list -->
   </ul>
 
 </div>

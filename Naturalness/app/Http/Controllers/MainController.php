@@ -9,6 +9,7 @@ use App\Models\Material;
 use App\Models\Component;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
 
 class MainController extends Controller
 {
@@ -24,9 +25,8 @@ class MainController extends Controller
         ]);
     }
 
-
     /**
-     * Traitement de la recherche : Aller chercher dans la Bdd les mots correspondant à la query
+     * Query : search in the databse words corresponding to the query
      */
 
     // Récupération de l'objet $request de type Request
@@ -50,7 +50,7 @@ class MainController extends Controller
         //tried but pb with the $v->id  : I only see 1 value in the view event if there are more
         // keyBy seemed to be a good idea by it didn't really helped to count the real number of answers
         foreach ($collection as $key => $value) {
-             // foreach ($value as $i => $v){
+            // foreach ($value as $i => $v){
             //  var_export($v->id);
             //give me a good result , but I am not able to give it to the view -> need to fix this
             //To have less code in the template (use serialize?? )
@@ -68,7 +68,6 @@ class MainController extends Controller
         ]);
     }
 
-
     public function material()
     {
         $materialList = Material::orderBy('name', 'ASC')->get();
@@ -83,8 +82,9 @@ class MainController extends Controller
         return view('about');
     }
 
-    public function contact()
+    //view contact form
+    public function contactForm()
     {
-        return view('contact.contact');
+        return view('contact.form');
     }
 }

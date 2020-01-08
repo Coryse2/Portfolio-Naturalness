@@ -17,7 +17,7 @@ class UserController extends Controller
         return view('user.signup');
     }
 
- // = signup in POST
+    // = signup in POST
     public function signupPostAction(Request $request)
     {
         // init the errors array
@@ -39,7 +39,7 @@ class UserController extends Controller
 
             $errorList[] = 'Email vide';
 
-        // http://php.net/manual/fr/function.filter-var.php
+            // http://php.net/manual/fr/function.filter-var.php
         } else if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
 
             $errorList[] = 'Email incorrect';
@@ -83,7 +83,6 @@ class UserController extends Controller
             if ($user) {
 
                 $errorList[] = 'Un compte avec cet email existe déjà';
-
             } else {
 
                 // Encode via bcrypt (default) : http://php.net/manual/fr/function.password-hash.php
@@ -130,7 +129,7 @@ class UserController extends Controller
         if (!UserSession::isConnected()) {
 
             return redirect()->route('home');
-        } 
+        }
         return view('user/account', [
             'user' => UserSession::getUser()
         ]);
@@ -151,7 +150,6 @@ class UserController extends Controller
 
         if (empty($email)) {
             $errorList[] = 'Email vide';
-
         } else if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
             $errorList[] = 'Email incorrect';
         }
@@ -165,14 +163,14 @@ class UserController extends Controller
         }
 
         if (empty($errorList)) {
-            // Test si le compte existe
+            // verify if account exists
             $user = User::where('email', $email)->first();
 
             // If I have a user
             if ($user) {
                 // https://www.php.net/manual/fr/function.password-verify.php
                 /*
-                     php password_verify takes 2 arguments
+                    php password_verify takes 2 arguments
                     1st: password to vérify (written by the user)
                     2nd: hashed password saved in database
 
@@ -187,7 +185,6 @@ class UserController extends Controller
                     UserSession::connect($user);
 
                     return redirect()->route('home');
-
                 } else {
                     $errorList[] = 'L\'identifiant et/ou mot de passe incorrect';
                 }
@@ -204,5 +201,4 @@ class UserController extends Controller
             ]
         ]);
     }
-
 }

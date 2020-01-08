@@ -25,7 +25,8 @@ ul{
 
 .home{
     background-image: url(../images/home.jpg);
-    background-size: 250vh;
+    opacity: 25%;
+    background-size: 350vh;
     background-repeat: no-repeat;
     margin-top:-2em;
     color: rgb(9, 46, 11);
@@ -150,3 +151,49 @@ margin:5em 25em 25em 25em ;
 .about>p{
    font-size:1em;
 }
+
+@media (max-width: 600px) {
+    body{
+        padding:0em;
+        margin:0.2em;
+     }
+
+     .home{
+        background-image: url(../images/home.jpg);
+        opacity: 25%;
+        background-size: 80vh;
+        background-repeat: no-repeat;
+        margin-top:-2em;
+        color:white;
+        text-align:center;
+    }
+
+     .home h1{
+        font-size:1.5em;
+        font-weight:800em;
+        color:white;
+    }
+
+    .home-intro{
+        margin:1em;
+        font-size:1em;
+    }
+
+    .presentation-list>ul{
+       margin:0;
+    }
+
+    .card{
+         width:100%;
+         margin-bottom:1.2em;
+    }
+
+    .sign{
+        margin:0;
+    }
+
+    .user-form{
+        margin:0;
+        padding:1em;
+    }
+  }

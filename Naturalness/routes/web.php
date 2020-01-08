@@ -117,13 +117,25 @@ $router->get('/pdf/recipe/{id}', [
 //CONTACT FORM
 //get road
 $router->get('/contact', [
-  'as' => 'contact_contact',
-  'uses' => 'MainController@contact'
+  'as' => 'form',
+  'uses' => 'MainController@contactForm'
 ]);
 
-/**post road
-$router->post('contact', [
-  'as' => 'contact_form',
-  'uses' => 'ContactController@store'
+// to post CONTACT FORM datas
+$router->post('/contact', [
+  'as' => 'form',
+  'uses' => 'MainController@mail'
 ]);
-**/
+
+//get road
+$router->get('/confirm', [
+  'as' => 'confirm',
+  'uses' => 'ContactController@confirm'
+]);
+
+
+
+
+
+
+

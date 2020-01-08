@@ -7,7 +7,7 @@
 
 
 <ul class="d-flex">
-  <!-- Liste des catégories -->
+  <!-- Categories list -->
   <?php foreach ($category->recipes as $recipe) : ?>
     <div class="card border-primary mb-3" style="max-width: 20rem;">
       <div class="card-header"><a href="<?= route('recipe_showRecipe', ['id' => $recipe->id]); ?>"><?= $recipe->name; ?></a></div>
@@ -19,7 +19,7 @@
     </div>
 
   <?php endforeach; ?>
-  <!-- End Liste des catégories -->
+  <!-- End Categories list -->
 </ul>
 
 <?= view('layout/footer'); ?>

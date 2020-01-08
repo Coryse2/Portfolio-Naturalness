@@ -6,7 +6,7 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
-     /**
+    /**
      * Show the category list
      */
     public function show()
@@ -14,30 +14,29 @@ class CategoryController extends Controller
         $categories = Category::all();
 
         return view('category/categories', [
-            'categories' => $categories, 
+            'categories' => $categories,
         ]);
     }
 
     /**
      * Show a category
-     * 
+     *
      * @param int $id Category primary key
      */
-    public function showById($id){
+    public function showById($id)
+    {
 
-        $category= Category::find($id);
+        $category = Category::find($id);
 
-        if($category===null){
+        if ($category === null) {
             abort(404, 'Catégorie non trouvée');
         }
 
         $recipe = $category->recipe;
 
-        return view('category/showCategory',[
-            'category'=>$category,
-            'recipe'=> $recipe ,
+        return view('category/showCategory', [
+            'category' => $category,
+            'recipe' => $recipe,
         ]);
-
-    }  
+    }
 }
-

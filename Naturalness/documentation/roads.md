@@ -18,6 +18,8 @@
 | `/signin` | - | Traitement du formulaire de connexion | POST | UserController | signinPost |  |
 | `/logout` | - | Traitement de la déconnexion | GET | UserController | logout |  |
 | `/account` | Mon compte | Page profil de l'utilisateur connecté | GET | UserController | profile | Affiche uniquement les informations dont on dispose sur l'utilisateur connecté |
+| `/contact` | Formulaire de contact |  l'utilisateur et le visiteurs peuvent contacter l'admin | GET  | ContactController | contactForm | |
+
 
 
 A VOIR 

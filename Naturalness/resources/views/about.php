@@ -10,6 +10,6 @@
     <p >Ce site n'utilise pas de cookies.</p>
     <p >Pour supprimer votre compte veuillez me contacter grâce à ce formulaire : </p>
 
-    <a class="nav-link" href="<?= route('contact_contact'); ?>">Contacter l'administrateur</a></li>
+    <a class="nav-link" href="<?= route('form'); ?>">Contacter l'administrateur</a></li>
 </div>
 <?= view('layout/footer'); ?>

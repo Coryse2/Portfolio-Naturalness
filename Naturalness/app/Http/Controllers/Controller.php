@@ -8,7 +8,7 @@ use Laravel\Lumen\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
 
-    //Ici on utilise le controller pour passer les informatons de session aux templates
+    //use the controller to give session information to templates
     public function __construct()
     {
         view()->share('userIsConnected', UserSession::isConnected());

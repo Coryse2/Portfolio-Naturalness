@@ -26,20 +26,20 @@ class RecipeController extends Controller
 
     /**
      * Show a recipe
-     * 
+     *
      * @param int $id Recipe primary key
      */
     public function showById($id)
     {
 
-        //la recette demandée
+        //get the recipe
         $recipe = Recipe::find($id);
 
         if ($recipe === null) {
             abort(404, 'Recette non trouvée');
         }
 
-        //Récupération des ingrédients associés
+        //get the components and categories
         $components = $recipe->components;
         $category = $recipe->category;
 
@@ -54,16 +54,15 @@ class RecipeController extends Controller
 
     public function recipePdf($id)
     {
-        $recipe= Recipe::find($id);
-        //Récupération des ingrédients associés
+        $recipe = Recipe::find($id);
+        //get components and categories
         $components = $recipe->components;
         $category = $recipe->category;
-  
+
 
         $pdf = PDF::loadView('recipe/recipepdf', compact('recipe', 'components', 'category'));
-        $name = "Naturalness-recette-".$recipe->title.".pdf";
+        $name = "Naturalness-recette-" . $recipe->title . ".pdf";
         return $pdf->download($name);
         return redirect()->route('recipe/showRecipe');
     }
-    
 }

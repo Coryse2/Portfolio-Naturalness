@@ -1,8 +1,8 @@
 <?= view('layout/header'); ?>
 
 <div class="presentation-list">
-<ul>
-    <!-- Liste du matériel -->
+  <ul>
+    <!-- Tools list -->
     <?php foreach ($materialList as $material) : ?>
 
       <div class="materialcard card border-primary">
@@ -12,8 +12,8 @@
         </div>
       </div>
     <?php endforeach; ?>
-    <!-- End Liste du matériel -->
+    <!-- End Tools list -->
   </ul>
 
-  </div>
+</div>
 <?= view('layout/footer'); ?>

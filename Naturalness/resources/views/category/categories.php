@@ -2,7 +2,7 @@
 
 <div class="presentation-list">
 <ul>
-  <!-- Liste des catégories -->
+  <!-- Categories list -->
   <?php foreach ($categories as $category) : ?>
     <div class="card recipes border-primary mb-3" style="max-width: 20rem;">
       <div class="card-header"><a href="<?= route('category_showCategory', ['id' => $category->id]); ?>"><?= $category->name; ?></a></div>
@@ -14,7 +14,7 @@
     </div>
 
   <?php endforeach; ?>
-  <!-- End Liste des catégories -->
+  <!-- End Categories list -->
 </ul>
 </div>
 <?= view('layout/footer'); ?>

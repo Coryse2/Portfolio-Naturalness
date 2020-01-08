@@ -8,9 +8,9 @@ class Component extends BaseController
 {
     public function show()
     {
-        
+
         $components = Component::all();
- 
+
         return view('component/components', [
             'components' => $components,
         ]);

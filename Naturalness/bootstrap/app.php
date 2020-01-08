@@ -83,8 +83,15 @@ $app->register(App\Providers\AuthServiceProvider::class);
 //New provider DomPDF
 $app->register(Barryvdh\DomPDF\ServiceProvider::class);
 
+//New provider illuminate / mail
+$app->configure('mail');
+$app->alias('mailer', Illuminate\Mail\Mailer::class);
+$app->alias('mailer', Illuminate\Contracts\Mail\Mailer::class);
+$app->alias('mailer', Illuminate\Contracts\Mail\MailQueue::class);
 
 
+//New provider to get new commands with php artisan
+$app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
