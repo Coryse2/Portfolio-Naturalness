@@ -13,7 +13,7 @@
 
   <ul class="Intro">
     <h3>Pourquoi les soins maison? </h3>
-    <!-- Liste des raisons -->
+    <!-- Reasons lists -->
     <?php foreach ($reasonList as $reason) : ?>
       <li><svg class="bi bi-bookmark" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M10 14l5 3V5a2 2 0 00-2-2H7a2 2 0 00-2 2v12l5-3zm-4 1.234l4-2.4 4 2.4V5a1 1 0 00-1-1H7a1 1 0 00-1 1v10.234z" clip-rule="evenodd" />
@@ -26,7 +26,7 @@
 
   <div class="presentation-list">
     <ul>
-      <!-- Liste des catégories -->
+      <!-- Categories list-->
       <?php foreach ($categoryList as $category) : ?>
 
         <div class="card border-primary ">
@@ -40,7 +40,7 @@
           </div>
         </div>
       <?php endforeach; ?>
-      <!-- End Liste des catégories -->
+      <!-- End Categories list -->
     </ul>
   </div>
 

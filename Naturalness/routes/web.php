@@ -127,11 +127,7 @@ $router->post('/contact', [
   'uses' => 'MainController@mail'
 ]);
 
-//get road
-$router->get('/confirm', [
-  'as' => 'confirm',
-  'uses' => 'ContactController@confirm'
-]);
+
 
 
 
