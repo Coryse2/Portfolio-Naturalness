@@ -1,3 +1,9 @@
+<?php
+// setting the cookie will permit to let the warning closed if the visitor has already seen it
+$cookie_name = "cookie";
+$cookie_value = "Naturalness";
+setcookie('cookie', 'Naturalness', time() + 365*24*3600); 
+?>
 <?= view('layout/header'); ?>
 <main>
 
@@ -45,7 +51,11 @@
   </div>
 
 </main>
-<button type="submit" class="close" data-dismiss="alert" id='button'>&times;
+
+
+<button type="submit" class="close
+<?php if(isset($_COOKIE[$cookie_name])) : ?><?= "inactive" ; ?><?php endif ; ?> "
+ data-dismiss="alert" id='button'>&times;
   <div class="alert alert-dismissible alert-danger">
     <h4 class="alert-heading">Warning!</h4>
     <p class="mb-0">Les huiles essentielles sont à utiliser avec précaution. L'usage de la plupart d'entre elles est déconseillé aux femmes enceintes et aux enfants. </p>
