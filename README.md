@@ -12,7 +12,7 @@ If you want to use this site offline install the repo :
 
 3- Import the sql database (Naturalness/documentation/naturalnessDB)
 
-4- create a .env at the root of the project then configurate your database (cf .env.example))
+4- create a .env at the root of the project then configure your database (cf .env.example))
 
 
 Launch your server and enjoy Lumen Naturalness!
