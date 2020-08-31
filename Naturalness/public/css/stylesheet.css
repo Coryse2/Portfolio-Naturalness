@@ -14,6 +14,7 @@ main{
 
 ul{
     list-style:none;
+    padding-inline-start: 0px
 }
 
 /**MATERIAL **/
@@ -25,8 +26,8 @@ ul{
 
 .home{
     background-image: url(../images/home.jpg);
-    opacity: 25%;
-    background-size: 350vh;
+    opacity: 75%;
+    background-size: 250vh;
     background-repeat: no-repeat;
     margin-top:-2em;
     color: rgb(9, 46, 11);
@@ -49,7 +50,10 @@ ul{
     margin-bottom:1.5em;
     background-color: transparent;
 }
-
+.card{
+    margin:1em;
+    width: 75%;
+}
 .card-header{
    font-size: 1em;
    font-weight:600;
@@ -83,7 +87,7 @@ ul{
 
 .presentation-list>ul>li{
     width:30%;
-    margin-bottom:2em;
+    margin:2em;
 }
 
 /** FOOTER **/
@@ -152,15 +156,14 @@ margin:5em 25em 25em 25em ;
    font-size:1em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     body{
         padding:0em;
         margin:0.2em;
      }
-
      .home{
         background-image: url(../images/home.jpg);
-        opacity: 25%;
+        opacity: 125%;
         background-size: 80vh;
         background-repeat: no-repeat;
         margin-top:-2em;
@@ -169,35 +172,42 @@ margin:5em 25em 25em 25em ;
     }
 
      .home-title{
-        font-size:1.6em;
+        font-size:1.8em;
         font-weight:800em;
-        color:white;
     }
-
     .home h1{
         color:white;
+        font-weight:1000em;
     }
-
     .home-intro{
         margin:1em;
-        font-size:1em;
+        font-size:.9em;
     }
-
+    .Intro{
+        margin:.5em;
+        font-size:.8em; 
+    }
     .presentation-list>ul{
        margin:0;
+       font-size:.7em; 
     }
-
     .card{
          width:100%;
-         margin-bottom:1.2em;
+         margin:1.2em;
     }
-
+    .card-body{
+        margin:.9em;
+        padding:0;
+    }
     .sign{
         margin:0;
     }
-
     .user-form{
         margin:0;
         padding:1em;
+    }
+    .card{
+        margin:.3em;
+        width: 75%;
     }
   }
