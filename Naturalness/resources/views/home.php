@@ -2,7 +2,7 @@
 // setting the cookie will permit to let the warning closed if the visitor has already seen it
 $cookie_name = "cookie";
 $cookie_value = "Naturalness";
-setcookie('cookie', 'Naturalness', time() + 365*24*3600); 
+setcookie('cookie', 'Naturalness', time() + 365 * 24 * 3600);
 ?>
 <?= view('layout/header'); ?>
 <main>
@@ -10,7 +10,7 @@ setcookie('cookie', 'Naturalness', time() + 365*24*3600);
   <div class="home">
     <div class="jumbotron">
       <h1 class="home-title display-3">Naturalness</h1>
-      <p class="lead">Faire ses soins n'a jamais été aussi facile!</p>
+      <h2 class="home-subtitle">Faire ses soins n'a jamais été aussi facile!</h2>
       <hr class="my-4">
     </div>
   </div>
@@ -29,6 +29,17 @@ setcookie('cookie', 'Naturalness', time() + 365*24*3600);
     <?php endforeach; ?>
   </ul>
   </div>
+
+<!-- This warning is used to catch the attention on the alert message. After the close event , the message will still be visible but only as a paragraph-->
+  <div class="alert alert-dismissible alert-danger">
+    <button type="submit" class="close
+<?php if (isset($_COOKIE[$cookie_name])) : ?><?= "inactive"; ?><?php endif; ?> " data-dismiss="alert" id='button'>&times;</button>
+
+    <h4 class="alert-heading">Warning!</h4>
+    <p class="mb-0">Les huiles essentielles sont à utiliser avec précaution. L'usage de la plupart d'entre elles est déconseillé aux femmes enceintes et aux enfants. </p>
+    <p><a class="link" href="http://cap.chru-lille.fr/GP/magazines/111380.html">Notions importantes (source @CHRU de Lille)</a></p>
+  </div>
+
 
   <div class="presentation-list">
     <ul>
@@ -51,16 +62,5 @@ setcookie('cookie', 'Naturalness', time() + 365*24*3600);
   </div>
 
 </main>
-
-
-<button type="submit" class="close
-<?php if(isset($_COOKIE[$cookie_name])) : ?><?= "inactive" ; ?><?php endif ; ?> "
- data-dismiss="alert" id='button'>&times;
-  <div class="alert alert-dismissible alert-danger">
-    <h4 class="alert-heading">Warning!</h4>
-    <p class="mb-0">Les huiles essentielles sont à utiliser avec précaution. L'usage de la plupart d'entre elles est déconseillé aux femmes enceintes et aux enfants. </p>
-    <p><a class="link" href="http://cap.chru-lille.fr/GP/magazines/111380.html">Notions importantes (source @CHRU de Lille)</a></p>
-  </div>
-</button>
 
 <?= view('layout/footer'); ?>

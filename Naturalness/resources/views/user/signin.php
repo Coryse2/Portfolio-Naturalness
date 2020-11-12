@@ -13,7 +13,7 @@
     <?php endif; ?>
 
 
-    <div class="col-12 col-md-4 ">
+    <div class="">
         <div class="card">
             <div class="card-header">Se connecter</div>
             <div class="card-body">
@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-
+   
 </div>
 
 <?php require __DIR__ . '/../layout/footer.php'; ?>

@@ -29,18 +29,21 @@ ul{
 /**HOME **/
 
 .home{
-    background-image: url(../images/home.jpg);
-    opacity: 75%;
-    background-size: 250vh;
+    background-image: url(../images/parc.jpg);
+    background-size: 100%;
     background-repeat: no-repeat;
     margin-top:-2em;
-    color: black;
     text-align:center;
 }
 
 .home h1{
     font-weight:600;
-    color:black;
+    color:rgb(248, 246, 246);
+    
+}
+.home h2{
+    font-weight:600;
+    color:rgb(248, 246, 246);
 }
 
 .border-primary{
@@ -170,21 +173,19 @@ margin:5em 25em 25em 25em ;
         margin:0.2em;
      }
      .home{
-        background-image: url(../images/home.jpg);
-        opacity: 125%;
-        background-size: 80vh;
+        background-image: url(../images/parc2.jpg);
+        opacity: 90%;
+        background-size: 100%;
         background-repeat: no-repeat;
-        margin-top:-2em;
-        color:white;
-        text-align:center;
-    }
-     .home-title{
-        font-size:1.8em;
-        font-weight:800em;
+        margin-top:-2em; 
     }
     .home h1{
-        color:white;
+        font-size:2.2em;
         font-weight:1000em;
+    }
+    .home h2{
+        font-size:1.7em;
+        font-weight: bolder ;
     }
     .home-intro{
         margin:1em;
